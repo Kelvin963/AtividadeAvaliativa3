@@ -16,8 +16,7 @@
 
     int RomPDec(const char numeroromano[]){
         int resultado = 0;
-        int tamanho = strlen(numeroromano); //calcula o comprimento da string para saber quantos caracteres vao ser percorridos
-        //a variável "tamanho" conterá o número de caracteres na string "numeroromano"
+        int tamanho = strlen(numeroromano); 
 
         for (int i = 0; i < tamanho; i++){
             if( i < tamanho - 1 && Ndecimal(numeroromano[i]) < Ndecimal(numeroromano[i+1])){
@@ -31,8 +30,7 @@
 
 int main(){
     
-    char numeroromano[12]; // Supomos que o número romano não excederá 12 caracteres.
-    //A entrada é composta de uma string, de até 12 caracteres, representando um número romano entre 1 e 1000
+    char numeroromano[20];
 
     scanf("%s", &numeroromano);
 
@@ -50,7 +48,7 @@ int main(){
             indc++;
         }
         if(indc == 0){
-            printf("%s na base 2: 0\n");             //codigo para achar valor binario
+            printf("%s na base 2: 0\n");    //codigo para achar valor binario
         }else{
             printf("%s na base 2: ", numeroromano);
             for(i = indc - 1; i >= 0; i--){
@@ -60,8 +58,6 @@ int main(){
         }
         
     printf("%s na base 10: %d\n",numeroromano, valordecimal);//printf do valor em decimal
-
-//finaldecimal = numero decimal do numero romano
 
     char hexa[64]; //64 bits
     indc = 0;
@@ -88,15 +84,6 @@ int main(){
             printf("\n");
 
         }
-
-
-
-    
-
-
-
-
-
 
     return 0;
 }

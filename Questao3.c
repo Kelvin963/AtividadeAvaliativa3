@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(){
 
@@ -110,13 +111,13 @@ int main(){
 
     if(pcomparacao == 0 && dvalidacao == 0){
         printf("Placa invalida\n");
-        printf("Dia da semana invalido");
+        printf("Dia da semana invalido\n");
 
     }else if(pcomparacao == 1 && dvalidacao == 0){
-        printf("Dia da semana invalido");
+        printf("Dia da semana invalido\n");
 
     }else if(pcomparacao == 0 && dvalidacao == 1){
-        printf("Placa invalida");
+        printf("Placa invalida\n");
     }
     
 
